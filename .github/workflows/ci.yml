@@ -1,0 +1,40 @@
+# CI Pipeline - Validates student submissions before deployment
+# This workflow runs on every push and pull request to main
+
+name: CI - Validate Student Submission
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  validate:
+    name: Validate Video Configuration
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 🔍 Validate studentVidID and studentViewCount
+        run: node validate.js
+
+      - name: 🎉 Success Message
+        if: success()
+        run: |
+          echo "================================================"
+          echo "🚀 CI Passed! Your changes are ready for CD!"
+          echo "================================================"
+          echo ""
+          echo "Next steps:"
+          echo "  - If this is a PR, merge it to trigger deployment"
+          echo "  - If pushed to main, Render will auto-deploy!"
+          echo ""
+          echo "🦭 May your video challenge the Saxophone Seal! 🦭"

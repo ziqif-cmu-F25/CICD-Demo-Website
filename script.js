@@ -4,12 +4,12 @@
 
 // Replace "YOUR_ID_HERE" with suggested vid ID
 // Change the video ID to: "https://www.youtube.com/embed/VlTo9Z94XQ0?si=bg3tArR73knMfnKP";
-const studentVidID = "";
+const studentVidID = "https://www.youtube.com/embed/VlTo9Z94XQ0?si=bg3tArR73knMfnKP";
 
 // Enter the view count of your chosen video (must be a non-negative integer)
 // Example: If your video has 1,000,000 views, enter 1000000
 // Change the view count to: 8_600_000
-const studentViewCount = 0;
+const studentViewCount = 8_600_000;
 
 // ============================================================
 // 🚫 DO NOT MODIFY BELOW THIS LINE

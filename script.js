@@ -9,7 +9,7 @@ const studentVidID = "";
 // Enter the view count of your chosen video (must be a non-negative integer)
 // Example: If your video has 1,000,000 views, enter 1000000
 // Change the view count to: 8_600_000
-const studentViewCount = ;
+const studentViewCount = 0;
 
 // ============================================================
 // 🚫 DO NOT MODIFY BELOW THIS LINE
